@@ -1,7 +1,7 @@
 const userUrl = 'https://jsonplaceholder.typicode.com/users'
 
 export const checkResponseStatus = () => {
-   return fetch('https://jsonplaceholder.typicode.com/users')
+   return fetch(userUrl)
     .then((response) => {
         return {
         status: response.status,
