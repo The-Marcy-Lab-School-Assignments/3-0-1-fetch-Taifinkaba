@@ -46,7 +46,20 @@ export const renderStatus = (statusDiv, statusInfoObj) => {
   statusDiv.appendChild(paragraph);
 }
 
-export const renderUsers = () => {
+export const renderUsers = (usersUl, users) => {
+  usersUl.innerHTML = '';
+
+  users.forEach(user => {
+    const li = document.createElement('li');
+    li.className = 'user-card';
+
+    const button = document.createElement('button');
+    button.textContent = `Load ${user.username}'s posts`;
+    button.dataset.userId = user.id;
+
+    li.appendChild(button);
+    usersUl.appendChild(li);
+  });
 };
 
 export const renderPosts = () => {
