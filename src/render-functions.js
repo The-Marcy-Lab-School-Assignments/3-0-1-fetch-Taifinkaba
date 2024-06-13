@@ -62,8 +62,24 @@ export const renderUsers = (usersUl, users) => {
   });
 };
 
-export const renderPosts = () => {
+export const renderPosts = (postsUl, posts) => {
+  postsUl.innerHTML = '';
+
+  posts.forEach(post => {
+    const li = document.createElement('li');
+
+    const title = document.createElement('h2');
+    title.textContent = post.title;
+
+    const body = document.createElement('p');
+    body.textContent = post.body;
+
+    li.appendChild(title);
+    li.appendChild(body);
+
+    postsUl.appendChild(li);
+  });
 }
 
-export const renderNewUser = () => {
+export const renderNewUser = (newUserDiv, newUserInfo) => {
 }
