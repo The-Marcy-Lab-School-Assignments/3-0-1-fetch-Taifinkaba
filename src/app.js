@@ -13,13 +13,7 @@ import {
 } from './fetch-functions.js';
 
 export default function app(appDiv) {
-  const {
-    statusDiv,
-    usersUl,
-    postsUl,
-    newUserForm,
-    newUserDiv
-  } = setupPageBasics(appDiv);
+  const {  statusDiv, usersUl, postsUl, newUserForm, newUserDiv } = setupPageBasics(appDiv);
 
   // Render basic page layout on load
   appDiv.appendChild(statusDiv);
