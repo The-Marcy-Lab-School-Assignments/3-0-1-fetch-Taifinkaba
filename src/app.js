@@ -11,10 +11,10 @@ import {
   createNewUser,
   getUsers
 } from './fetch-functions.js';
-
+/** FEEDBACK: I couldn't find your bug :( so I left other feedback!) */
 export default function app(appDiv) {
   const {  statusDiv, usersUl, postsUl, newUserForm, newUserDiv } = setupPageBasics(appDiv);
-
+  /** FEEDBACK: This is not very dry! */
   // Render basic page layout on load
   appDiv.appendChild(statusDiv);
   appDiv.appendChild(usersUl);
@@ -33,6 +33,7 @@ export default function app(appDiv) {
     .catch(error => console.error('Error fetching users:', error));
 
   // Initialize a variable to track the currently displayed user's posts
+  /** FEEDBACK: I do not think you need this variable but I like the way you are thinking! */
   let currentUserId = null;
 
   // Load posts on user button click (event delegation)
